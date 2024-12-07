@@ -1,0 +1,17 @@
+Source: asar-rs
+Section: utils
+Priority: optional
+Maintainer: Cédric Bellegarde <cedric.bellegarde@adishatz.org>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cargo,
+Standards-Version: 4.6.2
+Homepage: https://github.com/bellegarde-c/asar-rs
+
+Package: asar-rs
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: @electron/asar Rust porting

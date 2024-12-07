@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+override_dh_dwz:
+
+override_dh_shlibdeps:
+
+override_dh_auto_build:
+	cargo build
+
+override_dh_auto_install:
+	install -d debian/asar-rs/usr/bin
+	mv target/debug/asar debian/asar-rs/usr/bin
+
+%:
+	dh $@
